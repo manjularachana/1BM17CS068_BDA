@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5f7ed3abd6d76cbc84822d40"},"name":"rachana","rollno":10.0,"age":20.0,"contactno":1.23456891e+08,"emailid":"rachanag.cs17@bmsce.ac.in"}
+{"_id":{"$oid":"5f7ed3b0d6d76cbc84822d41"},"name":"FEM","rollno":11.0,"age":18.0,"contactno":1.23456591e+08,"emailid":"saumya.g31@gmail.com"}
+{"_id":{"$oid":"5f7ed3b3d6d76cbc84822d42"},"name":"swarna","rollno":12.0,"age":19.0,"contactno":1.23455891e+08,"emailid":"swarna.g31@gmail.com"}
+{"_id":{"$oid":"5f7ed3b9d6d76cbc84822d43"},"name":"sanjana","rollno":13.0,"age":20.0,"contactno":1.23456691e+08,"emailid":"sanjana.g31@gmail.com"}
+{"_id":{"$oid":"5f7ed3bcd6d76cbc84822d44"},"name":"ABC","rollno":14.0,"age":21.0,"contactno":1.23446891e+08,"emailid":"abc.g31@gmail.com"}
