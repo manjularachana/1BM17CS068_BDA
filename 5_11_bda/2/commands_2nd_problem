@@ -1,0 +1,30 @@
+#########1
+create keyspace Library with replication={
+   ... 'class':'SimpleStrategy',
+   ... 'replication_factor':1};
+   
+   
+########2
+create table library_info(stud_id text,counter_value counter,stud_name text,book_name text,book_id int,date_of_issue timestamp,primary key(stud_id,stud_name,book_name,book_id,date_of_issue));
+
+
+###inserting values
+cqlsh:library> update library_info set counter_value=counter_value+1 where stud_id='112' and stud_name='Rachana' and book_name='BDA' and book_id=1 and date_of_issue='2020-07-23';
+cqlsh:library> update library_info set counter_value=counter_value+1 where stud_id='112' and stud_name='Rachana' and book_name='BDA' and book_id=1 and date_of_issue='2020-07-23';
+cqlsh:library>  update library_info set counter_value=counter_value+1 where stud_id='113' and stud_name='Saumya' and book_name='BDA' and book_id=1 and date_of_issue='2020-06-23';
+cqlsh:library>  update library_info set counter_value=counter_value+1 where stud_id='113' and stud_name='Saumya' and book_name='BDA' and book_id=1 and date_of_issue='2020-06-23';
+cqlsh:library> update library_info set counter_value=counter_value+1 where stud_id='114' and stud_name='Sanjana' and book_name='BDA' and book_id=1 and date_of_issue='2020-05-23';
+cqlsh:library> update library_info set counter_value=counter_value+1 where stud_id='115' and stud_name='Swarna' and book_name='BDA' and book_id=1 and date_of_issue='2020-05-23';
+cqlsh:library> select * from library_info;
+
+
+###3
+cqlsh:library> select * from library_info where stud_id='112';
+
+########export
+(1 rows)
+cqlsh:library> copy library_info(stud_id,stud_name,book_name,book_id,date_of_issue,counter_value) to 'library_info.csv' with header=true;
+
+
+####import after changing something in csv file that was exported
+copy library_info(stud_id,stud_name,book_name,book_id,date_of_issue,counter_value) from 'library_info.csv' with header=true;
